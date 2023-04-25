@@ -89,3 +89,21 @@
 //     Console.Write(i + " ");
 //     i+=2;
 // }
+
+// Task 1++ seminara 2. Напишите программу, которая выводит случайное трехзначное число и удаляет вторую цифру этого числа.
+
+// int CutNumber(int num)
+// {
+//     int hundreds = num / 100;
+//     int unites = num % 10;
+//     int result = hundreds * 10 + unites;
+//     return result;
+// }
+
+// int randNumber = new Random().Next(100, 1000);
+// int shortNumber = CutNumber(randNumber);
+
+// Console.WriteLine($"New version of {randNumber} is {shortNumber}");
+
+// Task 2. 
+
