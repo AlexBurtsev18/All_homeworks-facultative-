@@ -165,4 +165,76 @@
 // int b = Convert.ToInt32(Console.ReadLine());
 // ProverkaKratnosti(num, a, b);
 
+// Task 10++: Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает вторую цифру этого числа.
+
+// int CutNumber(int num)
+// {
+//     num = num / 10 % 10;
+//     return num;
+// }
+// Console.WriteLine("Input 3digits number: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+// int result = CutNumber(n);
+// Console.WriteLine($"Вторая цифра числа {n} это {result}");
+
+// Task 13++: Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
+
+// bool CheckNumber(int num)
+// {
+//     if(num>100)
+//     return true;
+    
+//     else
+//     {
+//         Console.WriteLine("Третьей цифры нет! Введите другое число!");
+//         return false;
+//     }
+// }
+
+// int CutNumber(int num)
+// {
+//     while(num>999) num = num / 10;
+//     int cutNum = num % 10;
+//     return cutNum;
+// }
+// Console.WriteLine("Введите ваше число: ");
+// int num = Convert.ToInt32(Console.ReadLine());
+// int cutNum = CutNumber(num);
+// if(CheckNumber(num))
+// {
+//     Console.WriteLine($"Третья цифра вашего числа {num} это {cutNum}");
+// }
+
+// Task 15++: Напишите программу, которая принимает на вход цифру, обозначающую день недели,
+// и проверяет, является ли этот день выходным.
+
+// bool CheckWeekend(int num)
+// {
+//     if(num != 0 && num<8) return true;
+//     else
+//     {
+//         Console.WriteLine("Это не день недели!");
+//         return false;
+//     }
+// }
+
+// bool IsWeekend(int n)
+// {
+//     if(n > 5 && n <=7)
+//     {
+//         Console.WriteLine("Сегодня выходной!");
+//         return true;
+//     }
+//     else
+//     {
+//         Console.WriteLine("Придется работать!");
+//         return false;
+//     }
+// }
+// Console.WriteLine("Введите цифру дня недели: ");
+// int num = Convert.ToInt32(Console.ReadLine());
+// if(CheckWeekend(num))
+// {
+//     Console.WriteLine(IsWeekend(num));
+// }
 
