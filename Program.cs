@@ -105,5 +105,64 @@
 
 // Console.WriteLine($"New version of {randNumber} is {shortNumber}");
 
-// Task 2. 
+// Task 2 seminara 2. Напишите программу, которая выводит случайное число из отрезка от 10 до 99
+//  и показывает наибольшую цифру этого числа.
+
+// int ChooseNumber(int num)
+// {
+//     int decades = num / 10;
+//     int units = num % 10;
+//     if(decades > units) return decades;
+//     else return units;
+// }
+// int number = new Random().Next(10, 100);
+// Console.WriteLine(number);
+// Console.WriteLine(ChooseNumber(number));
+
+// Task 3++ seminara 2. Напишите программу, которая принимает 2 числа и определяет,
+// является ли второе число кратным первому?
+
+// bool Kratnost(int num1, int num2)
+// {
+//     if(num2 % num1 == 0)
+//     {
+//         Console.WriteLine("Yes");
+//         return true;
+//     }
+//     else
+//     {
+//         Console.WriteLine("No");
+//         return false;
+//     }
+// }
+// Console.WriteLine("Input first number: ");
+// int num1 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input second number: ");
+// int num2 = Convert.ToInt32(Console.ReadLine());
+// Kratnost(num1, num2);
+
+// Task 4++. Напишите программу, которая принимает на вход число n и проверяет, кратно ли оно одновременно a и b.
+
+// bool ProverkaKratnosti(int num, int a, int b)
+// {
+//     if(a % num == 0 && b % num == 0)
+//     {
+//         Console.WriteLine("Yes!");
+//         return true;
+//     }
+//     else
+//     {
+//         Console.WriteLine("No!");
+//         return false;
+//     }
+// }
+
+// Console.WriteLine("Введите проверяемое число: ");
+// int num = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите число a: ");
+// int a = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите число b: ");
+// int b = Convert.ToInt32(Console.ReadLine());
+// ProverkaKratnosti(num, a, b);
+
 
