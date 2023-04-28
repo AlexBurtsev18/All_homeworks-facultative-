@@ -238,3 +238,48 @@
 //     Console.WriteLine(IsWeekend(num));
 // }
 
+// Task 1++. Напишите программу, которая по заданному номеру четверти показывает
+// диапазон возможных координат точек в этой четверти.
+
+// void ShowRange(int quad)
+// {
+//     if(quad == 1) Console.WriteLine("x > 0 and y >0");
+//     else if(quad == 2) Console.WriteLine("x < 0 and y > 0");
+//     else if(quad == 3) Console.WriteLine("x < 0 and y < 0");
+//     else if(quad == 4) Console.WriteLine("x > 0 and y < 0");
+//     else Console.WriteLine("Wrong number of quadrant!");
+// }
+
+// Console.Write("Input number of quadrant: ");
+// int quadrant = Convert.ToInt32(Console.ReadLine());
+
+// ShowRange(quadrant);
+
+// Task 1++. Напишите программу, которая принимает на вход координаты точки и выдает номер четверти,
+//  в которой эта точка находится.
+
+void Quadrant(int numX, int numY)
+{
+    if(numX > 0 && numY > 0) Console.WriteLine("Ваша четверть - 1");
+    else if(numX < 0 && numY > 0) Console.WriteLine("Ваша четверть - 2");
+    else if(numX < 0 && numY < 0) Console.WriteLine("Ваша четверть - 3");
+    else if(numX > 0 && numY < 0) Console.WriteLine("Ваша четверть - 4");
+    else Console.WriteLine("Вы находитесь в точке 0");
+}
+
+Console.WriteLine("Введите координату X:");
+int numX = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите координату Y:");
+int numY = Convert.ToInt32(Console.ReadLine());
+Quadrant(numX, numY);
+
+
+
+
+// Task 2. Напишите программу, кторая принимет на вход число и выдает таблицу кваратов чисел от 1 до N.
+// void
+
+// Task 3. Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 2d пространстве.
+
+
+
