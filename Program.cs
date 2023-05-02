@@ -258,28 +258,58 @@
 // Task 1++. Напишите программу, которая принимает на вход координаты точки и выдает номер четверти,
 //  в которой эта точка находится.
 
-void Quadrant(int numX, int numY)
-{
-    if(numX > 0 && numY > 0) Console.WriteLine("Ваша четверть - 1");
-    else if(numX < 0 && numY > 0) Console.WriteLine("Ваша четверть - 2");
-    else if(numX < 0 && numY < 0) Console.WriteLine("Ваша четверть - 3");
-    else if(numX > 0 && numY < 0) Console.WriteLine("Ваша четверть - 4");
-    else Console.WriteLine("Вы находитесь в точке 0");
-}
+// void Quadrant(int numX, int numY)
+// {
+//     if(numX > 0 && numY > 0) Console.WriteLine("Ваша четверть - 1");
+//     else if(numX < 0 && numY > 0) Console.WriteLine("Ваша четверть - 2");
+//     else if(numX < 0 && numY < 0) Console.WriteLine("Ваша четверть - 3");
+//     else if(numX > 0 && numY < 0) Console.WriteLine("Ваша четверть - 4");
+//     else Console.WriteLine("Вы находитесь в точке 0");
+// }
 
-Console.WriteLine("Введите координату X:");
-int numX = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите координату Y:");
-int numY = Convert.ToInt32(Console.ReadLine());
-Quadrant(numX, numY);
-
-
+// Console.WriteLine("Введите координату X:");
+// int numX = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите координату Y:");
+// int numY = Convert.ToInt32(Console.ReadLine());
+// Quadrant(numX, numY);
 
 
-// Task 2. Напишите программу, кторая принимет на вход число и выдает таблицу кваратов чисел от 1 до N.
+// Task 2. Напишите программу, кторая принимет на вход число и выдает таблицу квадратов чисел от 1 до N.
 // void
 
+// void Table(int num)
+// {
+//     int count = 1;
+//     while(count<=num)
+//     {
+//         Console.WriteLine($"Квадрат {count} составляет {count*count}");
+//         count++;
+//     }
+// }
+// Console.WriteLine("Введите число: ");
+// int num = Convert.ToInt32(Console.ReadLine());
+// Table(num);
+
 // Task 3. Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 2d пространстве.
+
+// double Otrezok(double Ax, double Ay, double Bx, double By)
+// {
+//     double AC = Bx - Ax;
+//     double BC = By - Ay;
+//     double AB = Math.Sqrt(AC*AC + BC*BC);
+//     return AB;
+// }
+// Console.WriteLine("Введите координату Ax: ");
+// double Ax = Convert.ToDouble(Console.ReadLine());
+// Console.WriteLine("Введите координату Ay: ");
+// double Ay = Convert.ToDouble(Console.ReadLine());
+// Console.WriteLine("Введите координату Bx: ");
+// double Bx = Convert.ToDouble(Console.ReadLine());
+// Console.WriteLine("Введите координату By: ");
+// double By = Convert.ToDouble(Console.ReadLine());
+
+// double result = Math.Round(Otrezok(Ax, Ay, Bx, By),2);
+// Console.WriteLine($"расстояние между точками А и В составляет - {result}");
 
 
 
