@@ -311,5 +311,36 @@
 // double result = Math.Round(Otrezok(Ax, Ay, Bx, By),2);
 // Console.WriteLine($"расстояние между точками А и В составляет - {result}");
 
+// Homework к семинару 3. 
+// Task 19. Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
+
+int Palindrom(int num)
+{
+    int revNum = 0;
+    while(num>0)
+    {
+        revNum = revNum * 10 + num % 10;
+        num = num / 10;
+    }
+    return revNum;
+}
+bool IsPalindrom(int num)
+{
+    int revNum = Palindrom(num);
+    if(revNum == num)
+    {
+        Console.WriteLine("Это палиндром");
+        return true;
+    }
+    else 
+    {
+        Console.WriteLine("Это Не палиндром");
+        return false;
+    }
+}
+Console.WriteLine("Введите число: ");
+int num = Convert.ToInt32(Console.ReadLine());
+IsPalindrom(num);
+
 
 
