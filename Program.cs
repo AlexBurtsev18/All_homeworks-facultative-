@@ -312,35 +312,73 @@
 // Console.WriteLine($"расстояние между точками А и В составляет - {result}");
 
 // Homework к семинару 3. 
-// Task 19. Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
+// Task 19++. Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
 
-int Palindrom(int num)
-{
-    int revNum = 0;
-    while(num>0)
-    {
-        revNum = revNum * 10 + num % 10;
-        num = num / 10;
-    }
-    return revNum;
-}
-bool IsPalindrom(int num)
-{
-    int revNum = Palindrom(num);
-    if(revNum == num)
-    {
-        Console.WriteLine("Это палиндром");
-        return true;
-    }
-    else 
-    {
-        Console.WriteLine("Это Не палиндром");
-        return false;
-    }
-}
-Console.WriteLine("Введите число: ");
-int num = Convert.ToInt32(Console.ReadLine());
-IsPalindrom(num);
+// int Palindrom(int num)
+// {
+//     int revNum = 0;
+//     while(num>0)
+//     {
+//         revNum = revNum * 10 + num % 10;
+//         num = num / 10;
+//     }
+//     return revNum;
+// }
+// bool IsPalindrom(int num)
+// {
+//     int revNum = Palindrom(num);
+//     if(revNum == num)
+//     {
+//         Console.WriteLine("Это палиндром");
+//         return true;
+//     }
+//     else 
+//     {
+//         Console.WriteLine("Это Не палиндром");
+//         return false;
+//     }
+// }
+// Console.WriteLine("Введите число: ");
+// int num = Convert.ToInt32(Console.ReadLine());
+// IsPalindrom(num);
 
+// Task 21++. Напишите программу, которая принимает на вход координаты двух точек
+// и находит расстояние между ними в 3D пространстве.
 
+// double Distance(double Ax, double Ay, double Az, double Bx, double By, double Bz)
+// {
+//     double ACx = Bx - Ax;
+//     double ACy = By - Ay;
+//     double ACz = Bz - Az;
+//     double result = Math.Sqrt(ACx*ACx + ACy*ACy + ACz*ACz);
+//     return result;
+// }
+// Console.WriteLine("Введите x координату точки A:");
+// double Ax = Convert.ToDouble(Console.ReadLine());
+// Console.WriteLine("Введите y координату точки A:");
+// double Ay = Convert.ToDouble(Console.ReadLine());
+// Console.WriteLine("Введите z координату точки A:");
+// double Az = Convert.ToDouble(Console.ReadLine());
+// Console.WriteLine("Введите x координату точки B:");
+// double Bx = Convert.ToDouble(Console.ReadLine());
+// Console.WriteLine("Введите y координату точки B:");
+// double By = Convert.ToDouble(Console.ReadLine());
+// Console.WriteLine("Введите z координату точки B:");
+// double Bz = Convert.ToDouble(Console.ReadLine());
+// double result = Math.Round(Distance(Ax, Ay, Az, Bx, By, Bz),2);
+// Console.WriteLine($"Расстояние между точками A и B d 3D пространстве составляет {result}");
 
+// Task 23++. Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
+
+// void TablCube(double num)
+// {
+//     double count = 1;
+//     while(count<=num)
+//     {
+//         Console.WriteLine(Math.Pow(count,3));
+//         count++;
+//     }
+// }
+// Console.Write("Введите число: ");
+// double num = Convert.ToDouble(Console.ReadLine());
+// TablCube(num);
