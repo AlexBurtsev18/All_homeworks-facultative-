@@ -382,3 +382,220 @@
 // Console.Write("Введите число: ");
 // double num = Convert.ToDouble(Console.ReadLine());
 // TablCube(num);
+
+// Seminar 4. 
+// Task 1++. Напишите программу, которая принимает на вход число А и выдает сумму чисел от 1 до А.
+
+// void Summa(int num)
+// {
+//     int count = 1;
+//     int sum = 0;
+//     while(count <=num)
+//     {
+//         sum += count;
+//         count++;
+//     }
+//     Console.WriteLine(sum);
+// }
+// Console.WriteLine("Input your number: ");
+// int num = Convert.ToInt32(Console.ReadLine());
+// Summa(num);
+
+// Task 2++. Напишите программу, которая принимает на вход число А и выдает произведение чисел от 1 до А.
+
+// void Faktorial(int num)
+// {
+//     int composition = 1;
+//     int count = 1;
+//     while(count<=num)
+//     {
+//     composition *= count;
+//     count++;
+//     }
+//     Console.Write(composition);
+// }
+// Console.WriteLine("Input your number: ");
+// int num = Convert.ToInt32(Console.ReadLine());
+// Faktorial(num);
+
+// Homework at seminar 4.
+// Task 25++: Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
+
+// double Grade(double A, double B)
+// {
+//     double result = Math.Pow(A, B);
+//     return result;
+// }
+// Console.WriteLine("Input your number A: ");
+// double A = Convert.ToDouble(Console.ReadLine());
+// Console.WriteLine("Input your number A: ");
+// double B = Convert.ToDouble(Console.ReadLine());
+// double res = Math.Round(Grade(A,B));
+// Console.WriteLine($"число {A} в степени {B} это {res}");
+
+// Task 27++: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
+
+// int SumDigits(int num)
+// {
+//     int summa = 0;
+//     if(num == 0) summa = 0;
+//     while(num != 0)
+//     {
+//         summa = summa + (num % 10);
+//         num /= 10;
+//     }
+//     return summa;
+// }
+// Console.WriteLine("Input your number: ");
+// int num = Convert.ToInt32(Console.ReadLine());
+// int res = SumDigits(num);
+// Console.WriteLine(res);
+
+// Task 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
+
+// void Array(int[] array)
+// {
+//     int length = array.Length;
+//     int index = 0;
+//     while(index<length)
+//     {
+//         array[index] = new Random().Next(1,20);
+//         index++;
+//     }
+// }
+
+// void PrintArray(int[] collection)
+// {
+//     int count = collection.Length;
+//     int i = 0;
+//     while(i<count)
+//     {
+//         Console.WriteLine(collection[i]);
+//         i++;
+//     }
+// }
+//  int[] array = new int[8];
+//  Array(array);
+//  PrintArray(array);
+
+// Seminar 5. 
+
+int[] CreateRanndomArray(int size, int minValue, int maxValue)
+{
+    int[] array = new int[size];
+
+    for(int i = 0; i<size; i++)
+    {
+        array[i] = new Random().Next(minValue, maxValue+1);
+    }
+    return array;
+}
+
+void ShowArray(int[] array)
+{
+    for(int i = 0; i<array.Length; i++)
+    {
+        Console.Write(array[i] + " ");
+    }
+    Console.WriteLine();
+}
+
+// int GetSumOfNegatives(int[] array)
+// {
+//     int sum = 0;
+
+//     for(int i = 0; i<array.Length; i++)
+//         if(array[i]<0) 
+//             sum += array[i];
+//     return sum;
+// }
+
+// Console.Write("Input a quantity of elements: ");
+// int size = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Input a min possible value: ");
+// int min = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Input a max possible value: ");
+// int max = Convert.ToInt32(Console.ReadLine());
+
+// int[] myArray = CreateRanndomArray(size, min, max);
+// ShowArray(myArray);
+
+// Console.Write("Sum of negatives elements is " + GetSumOfNegatives(myArray));
+
+// Task 1. Напишите программу для замены элементов массива. Положительные элементы заменяются на отрицательные и наоборот
+
+// int[] MakePositive(int[] array)
+// {
+//     for(int i = 0; i<array.Length; i++)
+//     {
+//         array[i] *= (-1);
+//     }
+//     return array;
+// }
+
+// Console.Write("Input a quantity of elements: ");
+// int size = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Input a min possible value: ");
+// int min = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Input a max possible value: ");
+// int max = Convert.ToInt32(Console.ReadLine());
+
+// int[] myArray = CreateRanndomArray(size, min, max);
+// ShowArray(myArray);
+// int[] newArray = MakePositive(myArray);
+// ShowArray(newArray);
+
+// Task 2. Напишите программу, которая определяет, присутствует ли заданное число в массиве.
+
+// bool CheckNumber(int[] array, int find)
+// {
+//     for(int i = 0; i<array.Length; i++)
+//         if(array[i] == find)
+//         {
+//             Console.WriteLine("Данное число есть в списке!");
+//             return true;
+//         }
+//     Console.WriteLine("Данное числа в списке НЕТ!");
+//     return false;
+// }
+// Console.Write("Input a quantity of elements: ");
+// int size = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Input a min possible value: ");
+// int min = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Input a max possible value: ");
+// int max = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Input target number: ");
+// int find = Convert.ToInt32(Console.ReadLine());
+
+// int[] myArray = CreateRanndomArray(size, min, max);
+// ShowArray(myArray);
+// CheckNumber(myArray, find);
+
+// Task 3. Задайте одномерный массив из m случайных чисел. Найдите количество элементов массива, 
+// значения которых лежат в промежутка от a до b.
+
+int Quantity(int[] array, int a, int b)
+{
+    int sum = 0;
+    for(int i = 0; i<array.Length; i++)
+        if(array[i]> a && array[i]< b) sum++;
+    return sum;
+}
+Console.Write("Input a quantity of elements: ");
+int size = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input a min possible value: ");
+int min = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input a max possible value: ");
+int max = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input mim border: ");
+int minBorder = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input max border: ");
+int maxBorder = Convert.ToInt32(Console.ReadLine());
+
+int[] myArray = CreateRanndomArray(size, min, max);
+ShowArray(myArray);
+int result = Quantity(myArray, minBorder, maxBorder);
+Console.WriteLine($"Количество элементов в пределах {minBorder} и {maxBorder} составляет {result}");
+
+
+
