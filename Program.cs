@@ -480,25 +480,25 @@
 
 // Seminar 5. 
 
-int[] CreateRanndomArray(int size, int minValue, int maxValue)
-{
-    int[] array = new int[size];
+// int[] CreateRanndomArray(int size, int minValue, int maxValue)
+// {
+//     int[] array = new int[size];
 
-    for(int i = 0; i<size; i++)
-    {
-        array[i] = new Random().Next(minValue, maxValue+1);
-    }
-    return array;
-}
+//     for(int i = 0; i<size; i++)
+//     {
+//         array[i] = new Random().Next(minValue, maxValue+1);
+//     }
+//     return array;
+// }
 
-void ShowArray(int[] array)
-{
-    for(int i = 0; i<array.Length; i++)
-    {
-        Console.Write(array[i] + " ");
-    }
-    Console.WriteLine();
-}
+// void ShowArray(int[] array)
+// {
+//     for(int i = 0; i<array.Length; i++)
+//     {
+//         Console.Write(array[i] + " ");
+//     }
+//     Console.WriteLine();
+// }
 
 // int GetSumOfNegatives(int[] array)
 // {
@@ -574,28 +574,139 @@ void ShowArray(int[] array)
 // Task 3. Задайте одномерный массив из m случайных чисел. Найдите количество элементов массива, 
 // значения которых лежат в промежутка от a до b.
 
-int Quantity(int[] array, int a, int b)
-{
-    int sum = 0;
-    for(int i = 0; i<array.Length; i++)
-        if(array[i]> a && array[i]< b) sum++;
-    return sum;
-}
-Console.Write("Input a quantity of elements: ");
-int size = Convert.ToInt32(Console.ReadLine());
-Console.Write("Input a min possible value: ");
-int min = Convert.ToInt32(Console.ReadLine());
-Console.Write("Input a max possible value: ");
-int max = Convert.ToInt32(Console.ReadLine());
-Console.Write("Input mim border: ");
-int minBorder = Convert.ToInt32(Console.ReadLine());
-Console.Write("Input max border: ");
-int maxBorder = Convert.ToInt32(Console.ReadLine());
+// int Quantity(int[] array, int a, int b)
+// {
+//     int sum = 0;
+//     for(int i = 0; i<array.Length; i++)
+//         if(array[i]> a && array[i]< b) sum++;
+//     return sum;
+// }
+// Console.Write("Input a quantity of elements: ");
+// int size = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Input a min possible value: ");
+// int min = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Input a max possible value: ");
+// int max = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Input mim border: ");
+// int minBorder = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Input max border: ");
+// int maxBorder = Convert.ToInt32(Console.ReadLine());
 
-int[] myArray = CreateRanndomArray(size, min, max);
-ShowArray(myArray);
-int result = Quantity(myArray, minBorder, maxBorder);
-Console.WriteLine($"Количество элементов в пределах {minBorder} и {maxBorder} составляет {result}");
+// int[] myArray = CreateRanndomArray(size, min, max);
+// ShowArray(myArray);
+// int result = Quantity(myArray, minBorder, maxBorder);
+// Console.WriteLine($"Количество элементов в пределах {minBorder} и {maxBorder} составляет {result}");
 
+// Task 52. Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов 
+// в каждом столбце.
+// Например, задан массив:
+// 1 4 7 2
+// 5 9 2 3
+// 8 4 2 4
+// Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
 
+// Homework at seminar 5. 
+// Task 34: Задайте массив заполненный случайными положительными трёхзначными числами.
+// Напишите программу, которая покажет количество чётных чисел в массиве.
 
+// int[] CreateRanndomArray(int size)
+// {
+//     int[] array = new int[size];
+
+//     for(int i = 0; i<size; i++)
+//         array[i] = new Random().Next(100, 1000);
+//     return array;
+// }
+
+// void ShowArray(int[] array)
+// {
+//     for(int i = 0; i<array.Length; i++)
+//         Console.Write(array[i] + " ");
+//     Console.WriteLine();
+// }
+
+// int CheckParity(int[] array)
+// {
+//     int count = 0;
+//     for(int i = 0; i<array.Length; i++)
+//         if(array[i] % 2 == 0) count++;
+//     return count;
+// }
+
+// Console.WriteLine("Введите размер массива: ");
+// int size = Convert.ToInt32(Console.ReadLine());
+
+// int[] myArray = CreateRanndomArray(size);
+// ShowArray(myArray);
+// Console.WriteLine($"Среди выведенных чисел {CheckParity(myArray)} четных");
+
+// Task 36: Задайте одномерный массив, заполненный случайными числами. 
+// Найдите сумму элементов, стоящих на нечётных позициях.
+
+// int[] CreateRanndomArray(int size)
+// {
+//     int[] array = new int[size];
+
+//     for(int i = 0; i<size; i++)
+//         array[i] = new Random().Next(10, 100);
+//     return array;
+// }
+
+// void ShowArray(int[] array)
+// {
+//     for(int i = 0; i<array.Length; i++)
+//         Console.Write(array[i] + " ");
+//     Console.WriteLine();
+// }
+
+// int SummaNotParityNumbers(int[] array)
+// {
+//     int sum = 0;
+//     for(int i=0; i<array.Length; i = i+2)
+//         sum += array[i];
+//     return sum;
+// }
+
+// Console.WriteLine("Введите размер массива: ");
+// int size = Convert.ToInt32(Console.ReadLine());
+
+// int[] myArray = CreateRanndomArray(size);
+// ShowArray(myArray);
+// Console.WriteLine($"Сумма чисел на нечетных позициях составлет {SummaNotParityNumbers(myArray)}.");
+
+// Task 38: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
+
+// int[] CreateRanndomArray(int size)
+// {
+//     int[] array = new int[size];
+
+//     for(int i = 0; i<size; i++)
+//         array[i] = new Random().Next(-100, 100);
+//     return array;
+// }
+
+// void ShowArray(int[] array)
+// {
+//     for(int i = 0; i<array.Length; i++)
+//         Console.Write(array[i] + " ");
+//     Console.WriteLine();
+// }
+
+// int FindMinMaxNumbers(int[] array)
+// {
+//     int max = array[0];
+//     int min = array[0];
+//     for(int i = 0; i<array.Length; i++)
+//         if(array[i]>max) max = array[i];
+//     for(int i = 0; i<array.Length; i++)
+//         if(array[i]<min) min = array[i];  
+//     int result = max - min;
+//     return result;  
+// }
+
+// Console.WriteLine("Введите размер массива: ");
+// int size = Convert.ToInt32(Console.ReadLine());
+// int[] myArray = CreateRanndomArray(size);
+// ShowArray(myArray);
+// int res = FindMinMaxNumbers(myArray);
+// Console.WriteLine($"Разница между максимальным числом составляет {res}");
