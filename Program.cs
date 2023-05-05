@@ -710,3 +710,139 @@
 // ShowArray(myArray);
 // int res = FindMinMaxNumbers(myArray);
 // Console.WriteLine($"Разница между максимальным числом составляет {res}");
+
+// Seminar 6. 
+
+// Task 1. 
+
+// int[] CreateRanndomArray(int size)
+// {
+//     int[] array = new int[size];
+
+//     for(int i = 0; i<size; i++)
+//         array[i] = new Random().Next(100, 1000);
+//     return array;
+// }
+
+// void ShowArray(int[] array)
+// {
+//     for(int i = 0; i<array.Length; i++)
+//         Console.Write(array[i] + " ");
+//     Console.WriteLine();
+// }
+
+// void ReverseArray(int[] array)
+// {
+//     for(int i = 0, j = array.Length-1; i<j; i++, j--)
+//     {
+//         int temp = array[i];
+//         array[i] = array[j];
+//         array[j] = temp;
+//     }
+// }
+
+
+
+// Console.WriteLine("Введите размер массива: ");
+// int size = Convert.ToInt32(Console.ReadLine());
+// int[] myArray = CreateRanndomArray(size);
+// ShowArray(myArray);
+// ReverseArray(myArray);
+// ShowArray(myArray);
+
+// Task 2. Напишите программу, которая принимает на вход 3 числа и проверяет, 
+// может ли существовать треугольник с такими сторонами.
+// bool. 3 аргумента.
+
+// bool Triangle(int a, int b, int c)
+// {
+//     if(a+b<c) return false;
+//     if(a+c<b) return false;
+//     if(b+c<a) return false;
+//     else return true;
+// }
+// Console.WriteLine("Введите число стороны a ");
+// int a = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите число стороны b ");
+// int b = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите число стороны c ");
+// int c = Convert.ToInt32(Console.ReadLine());
+
+// Console.WriteLine(Triangle(a,b,c));
+
+// Task 3. Задать ряд Fibonacci.
+// массив.
+// int[] Fibonacci(int n)
+// {
+//     int[] array = new int[n];
+//     array[0] = 0;
+//     array[1] = 1;
+//     for(int i = 2; i<n; i++)
+//     {
+//         array[i] = array[i-1] + array[i-2];
+//     }
+//     return array;
+// }
+
+// Console.WriteLine("Введите количество элементов массива: ");
+// int num = Convert.ToInt32(Console.ReadLine());
+// int[] array = Fibonacci(num);
+// ShowArray(array);
+
+
+// Task 4. напишите программу, которая будет осуществлять копирование массива поэлементно. 
+
+// void Copy(int[] array, int[] copiedArray)
+// {
+//     for(int i = 0; i<array.Length; i++)
+//     copiedArray[i] = array[i];
+// }
+
+// int[] array = {1, 5, 4, 12, 15};
+// int[] copiedArray = new int[array.Length];
+
+// Copy(array, copiedArray);
+// ShowArray(array);
+// ShowArray(copiedArray);
+
+// Homework at seminar 7. 
+
+// Task 41: Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел больше 0 ввёл пользователь.
+
+// int Prompt(string message)
+// {
+//     Console.Write(message);
+//     string value = Console.ReadLine();
+//     int result = Convert.ToInt32(value);
+//     return result;
+// }
+
+// int[] InputArray(int length)
+// {
+//     int[] array = new int[length];
+//     for(int i = 0; i<array.Length; i++)
+//         array[i] = Prompt($"Введите {i + 1}-й элемент: ");
+//     return array;
+// }
+
+// void PrintArray(int[] array)
+// {
+//     for(int i = 0; i<array.Length; i++)
+//         Console.WriteLine($"a[{i}] = {array[i]}");
+// }
+
+
+// int CountPositiveNumbers(int[] array)
+// {
+//     int count = 0;
+//     for(int i = 0; i<array.Length; i++)
+//         if(array[i]>0) count++;
+//     return count;
+// }
+
+// int length = Prompt("Введите количество элементов > ");
+// int[] array;
+// array = InputArray(length);
+// PrintArray(array);
+// int result = CountPositiveNumbers(array);
+// Console.WriteLine($"Количество чисел больше 0 - {result}");
