@@ -851,20 +851,183 @@
 // значения b1, k1, b2 и k2 задаются пользователем.
 // b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)
 
-Console.Write("Введите k1: ");
-var k1 = Convert.ToDouble(Console.ReadLine());
-Console.Write("Введите b1: ");
-var b1 = Convert.ToDouble(Console.ReadLine());
-Console.Write("Введите k2: ");
-var k2 = Convert.ToDouble(Console.ReadLine());
-Console.Write("Введите b2: ");
-var b2 = Convert.ToDouble(Console.ReadLine());
+// Console.Write("Введите k1: ");
+// var k1 = Convert.ToDouble(Console.ReadLine());
+// Console.Write("Введите b1: ");
+// var b1 = Convert.ToDouble(Console.ReadLine());
+// Console.Write("Введите k2: ");
+// var k2 = Convert.ToDouble(Console.ReadLine());
+// Console.Write("Введите b2: ");
+// var b2 = Convert.ToDouble(Console.ReadLine());
  
  
-var x = (b2 - b1) / (k1 - k2);
-var y = k1 * x + b1;
+// var x = (b2 - b1) / (k1 - k2);
+// var y = k1 * x + b1;
  
-x = Math.Round(x, 3);
-y = Math.Round(y, 3);
+// x = Math.Round(x, 3);
+// y = Math.Round(y, 3);
  
-Console.WriteLine($"Пересечение в точке: ({x};{y})");
+// Console.WriteLine($"Пересечение в точке: ({x};{y})");
+
+
+
+// !!!!!!!!!!!!   ЛЕКЦИЯ С КАМЯНЕЦКИМ ПРО РЕКУРСИЮ И ДВУМЕРНЫЕ МАССИВЫ !!!!!!!!!!!!!!
+
+// int Factorial (int n)
+// {
+//     if(n == 1) return 1;
+//     else return n*Factorial(n-1);
+// }
+
+// Console.WriteLine(Factorial(7));
+
+// void PrintArray(int[,] matr)
+// {
+//     for(int i = 0; i<matr.GetLength(0); i++)
+//     {
+//         for(int j = 0; j<matr.GetLength(1); j++)
+//             Console.Write($"{matr[i, j]} ");
+//     Console.WriteLine();
+//     }
+// }
+
+// void Fill(int[,] matr)
+// {
+//     for(int i = 0; i<matr.GetLength(0); i++)
+//     {
+//         for(int j = 0; j<matr.GetLength(1); j++)
+//         {
+//             matr[i,j] = new Random().Next(1, 10);
+//         }
+//     }
+// }
+
+// int[,] matrix = new int[3, 4];
+// PrintArray(matrix);
+// Console.WriteLine();
+// Fill(matrix);
+// PrintArray(matrix);
+
+// !!!!!!!!!!!!!!  ОБУЧЕНИЕ ПО С#. УРОК №4. !!!!!!!!!!!!!!!!!!!!!!!
+
+// Console.Write("Введите число с точкой: ");
+// float userInput = float.Parse(Console.ReadLine());
+
+// float result;
+// result = userInput + 10f;
+// Console.WriteLine("Переменная: " + result);
+// System.Console.WriteLine();;
+
+// System.Console.WriteLine("Введите радиус круга: ");
+// double radius = Convert.ToDouble(Console.ReadLine());
+// double area = Math.Round(Math.PI * Math.Pow(radius, 2),3);
+// System.Console.WriteLine("Площадь круга с радиусом {0} равна {1}", radius, area);
+
+// !!!!!!!!!!!!!!!!!!!!!!!! Семинар 7. !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+// int[,] CreateRandom2DArray(int rows, int columns, int minValue, int maxValue)
+// {
+//     int[,] array = new int[rows, columns];
+
+//     for(int i = 0; i < rows; i++)
+//         for(int j = 0; j < columns; j++)
+//             array[i,j] = new Random().Next(minValue, maxValue + 1);
+
+//     return array;
+// }
+
+void Show2DArray(int[,] array)
+{
+    for(int i = 0; i<array.GetLength(0); i++)
+    {
+        for(int j = 0; j<array.GetLength(1); j++)
+        {
+            Console.Write(array[i,j] + " ");
+        }
+        Console.WriteLine();    
+    }
+    Console.WriteLine();
+}
+
+// Console.Write("Input quantity of rows: ");
+// int rows = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Input quantity of columns: ");
+// int columns = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Input quantity of min possible value: ");
+// int minValue = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Input quantity of max possible value: ");
+// int maxValue = Convert.ToInt32(Console.ReadLine());
+
+// int[,] myArray = CreateRandom2DArray(rows, columns, minValue, maxValue);
+// Show2DArray(myArray);
+
+// Task 1. Необходимо задать двумерный массив m на n, 
+// каждый элемент в массиве при этом находится по формуле Aij = i+j. Выведите полученный массив на экран. 
+
+// int[,] CreateArray(int rows, int columns)
+// {
+//     int[,] array = new int[rows, columns];
+
+//     for(int i = 0; i < rows; i++)
+//         for(int j = 0; j < columns; j++)
+//             array[i,j] = i+j;
+//     return array;
+// }
+
+// void Show2DArray(int[,] array)
+// {
+//     for(int i = 0; i<array.GetLength(0); i++)
+//     {
+//         for(int j = 0; j<array.GetLength(1); j++)
+//         {
+//             Console.Write(array[i,j] + " ");
+//         }
+//         Console.WriteLine();    
+//     }
+//     Console.WriteLine();
+// }
+
+// Console.Write("Input quantity of rows: ");
+// int rows = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Input quantity of columns: ");
+// int columns = Convert.ToInt32(Console.ReadLine());
+
+// int[,] myArray = CreateArray(rows, columns);
+
+// Show2DArray(myArray);
+
+// Task 2. Найдите элементы, у которых оба индекса четные и замените на их квадраты.
+
+// int[,] CreateRandom2DArray(int rows, int columns, int minValue, int maxValue)
+// {
+//     int[,] array = new int[rows, columns];
+
+//     for(int i = 0; i < rows; i++)
+//         for(int j = 0; j < columns; j++)
+//             array[i,j] = new Random().Next(minValue, maxValue + 1);
+
+//     return array;
+// }
+
+// void Kvadraty(int[,] array)
+// {
+//     for(int i = 0; i < array.GetLength(0); i++)
+//         for(int j = 0; j < array.GetLength(1); j++)
+//             if(i % 2 == 0 && j % 2 == 0) array[i,j] = array[i,j] * array[i,j];
+// }
+// Console.Write("Input quantity of rows: ");
+// int rows = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Input quantity of columns: ");
+// int columns = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Input quantity of min possible value: ");
+// int minValue = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Input quantity of max possible value: ");
+// int maxValue = Convert.ToInt32(Console.ReadLine());
+
+// int[,] myArray = CreateRandom2DArray(rows, columns, minValue, maxValue);
+// Show2DArray(myArray);
+// Kvadraty(myArray);
+// Show2DArray(myArray);
+
+
+// Task 3. Задайте двумерный массив, найдите все элементы, располагающиеся на главной диагонали. 
